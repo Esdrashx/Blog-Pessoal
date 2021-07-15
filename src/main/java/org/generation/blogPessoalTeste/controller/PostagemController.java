@@ -28,7 +28,6 @@ public class PostagemController {
 	@Autowired
 	private PostagemRepository repository;
 
-	// METODOS-TESTE QUE IMPLEMENTEI POR BUSCA
 
 	@GetMapping("/all")
 	public List<Postagem> findAll() {
@@ -45,7 +44,6 @@ public class PostagemController {
 		return repository.getByTituloContainingIgnoreCase("Cores");
 	}
 
-	// METODOS PELO PROFESSOR NO VIDEO
 
 	@GetMapping("/GetAll") // método findAll
 	public ResponseEntity<List<Postagem>> findAllPostagem() {
@@ -77,7 +75,6 @@ public class PostagemController {
 		repository.deleteById(id);
 	}
 
-	// MÉTODOS-TESTE TENTANDO USAR GETBYID
 
 	@GetMapping("/getByIdteste")
 	public Postagem findByIdteste() {
